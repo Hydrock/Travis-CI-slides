@@ -3,9 +3,10 @@ node_js:
   - node
 install:
   - npm install
+before_script:
+  - npm install -g gulp-cli
 script:
   - gulp build
-
 deploy:
   provider: pages
   skip_cleanup: true
