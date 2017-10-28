@@ -7,7 +7,7 @@ uglify = require('gulp-uglify'),
 sass = require('gulp-sass'),
 sourcemaps = require('gulp-sourcemaps'),
 rigger = require('gulp-rigger'),
-cssmin = require('gulp-minify-css'),
+cleanCSS = require('gulp-clean-css'),
 imagemin = require('gulp-imagemin'),
 pngquant = require('imagemin-pngquant'),
 rimraf = require('rimraf'),
@@ -16,11 +16,11 @@ reload = browserSync.reload;
 
 var path = {
   build: {
-      html: 'build/',
-      js: 'build/js/',
-      css: 'build/css/',
-      img: 'build/img/',
-      fonts: 'build/fonts/'
+      html: 'dist/',
+      js: 'dist/js/',
+      css: 'dist/css/',
+      img: 'dist/img/',
+      fonts: 'dist/fonts/'
   },
   src: {
       html: 'src/*.html',
@@ -36,12 +36,12 @@ var path = {
       img: 'src/img/**/*.*',
       fonts: 'src/fonts/**/*.*'
   },
-  clean: './build'
+  clean: './dist'
 };
 
 var config = {
   server: {
-      baseDir: "./build"
+      baseDir: "./dist"
   },
   tunnel: true,
   host: 'localhost',
@@ -71,7 +71,7 @@ gulp.task('style', function () {
       .pipe(sourcemaps.init())
       .pipe(sass())
       .pipe(prefixer())
-      .pipe(cssmin())
+      .pipe(cleanCSS())
       .pipe(sourcemaps.write())
       .pipe(gulp.dest(path.build.css))
       .pipe(reload({stream: true}));
