@@ -1,0 +1,60 @@
+@import url(../reveal/css/reveal.css);
+@import url(../reveal/css/theme/beige.css);
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=cyrillic");
+body, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: 'Roboto', sans-serif; }
+
+.build-systems-images {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  justify-items: center; }
+  .build-systems-images img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain; }
+
+.deploy-images {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center; }
+  .deploy-images img {
+    width: 160px;
+    height: 160px;
+    object-fit: contain; }
+
+.travis-images {
+  display: grid;
+  grid-template-columns: auto;
+  justify-items: center; }
+  .travis-images img {
+    width: 400px;
+    height: 400px; }
+
+.what-can-travis-do-list {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-items: center;
+  padding: 0;
+  list-style: none; }
+
+.what-can-travis-do-list__item {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto 300px; }
+  .what-can-travis-do-list__item img {
+    width: 500px;
+    height: 800px; }
+
+.image-no-borders {
+  border: none !important;
+  box-shadow: none !important; }
+
+.image-500-200 {
+  width: 500px;
+  height: 200px;
+  object-fit: contain; }
+
+.image-800-400 {
+  width: 800px;
+  height: 400px;
+  object-fit: contain; }

@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "reveal": "^0.0.4"
+    "reveal": "^0.0.4",
+    "sass-test.sh": "^1.4.0"
   },
   "name": "Travis-CI-slides",
   "version": "1.0.0",
@@ -22,5 +23,8 @@
     "gulp-watch": "^4.3.11",
     "imagemin-pngquant": "^5.0.1",
     "rimraf": "^2.6.2"
+  },
+  "scripts": {
+    "test": "sass-test -r src/style/"
   }
 }
