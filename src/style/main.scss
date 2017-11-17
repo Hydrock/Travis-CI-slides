@@ -1,6 +1,11 @@
 @import "../reveal/css/reveal.css";
 @import "../reveal/css/theme/beige.css";
 
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&subset=cyrillic');
+
+body, .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+  font-family: 'Roboto', sans-serif;
+}
 
 .build-systems-images {
   display: grid;
@@ -56,7 +61,12 @@
   }
 }
 
-// images 
+// images
+
+.image-no-borders {
+  border: none!important;
+  box-shadow: none!important;
+}
 
 .image-500-200 {
   width: 500px;
